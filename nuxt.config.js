@@ -1,3 +1,5 @@
+var tailwindcss = require('tailwindcss')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -13,6 +15,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    '~/css/main.css'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -30,6 +35,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    postcss: [
+      tailwindcss('./tailwindcss.config.js')
+    ],
     /*
     ** Run ESLint on save
     */

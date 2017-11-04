@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container mx-auto">
     <div>
       <logo/>
       <h1 class="title">
