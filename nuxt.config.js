@@ -1,4 +1,5 @@
 var tailwindcss = require('tailwindcss')
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   /*
@@ -36,7 +37,8 @@ module.exports = {
   */
   build: {
     postcss: [
-      tailwindcss('./tailwindcss.config.js')
+      tailwindcss('./tailwindcss.config.js'),
+      autoprefixer
     ],
     /*
     ** Run ESLint on save

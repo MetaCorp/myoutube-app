@@ -13,3 +13,6 @@ dist
 # @nuxtjs/pwa
 sw.*
 workbox-*
+
+# Testing
+__snapshots__
