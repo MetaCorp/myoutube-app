@@ -1,7 +1,6 @@
 <template>
   <section class="container mx-auto">
     <div>
-      <logo/>
       <h1 class="title">
         myoutube-app
       </h1>
@@ -17,12 +16,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
 }
 </script>
 
