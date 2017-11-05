@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import moment from 'moment'
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now'
 
 const vuesArray = [{
   val: 1000000000,
@@ -29,10 +29,17 @@ Vue.filter('vues', val => {
   return Math.round(retVal * nbFloat) / nbFloat + ' ' + w.key + ' vues'
 })
 
-Vue.filter('moment', (val, fromFormat, toFormat) => {
-  return moment(val, fromFormat).format(toFormat)
+var regex = /P((([0-9]*\.?[0-9]*)Y)?(([0-9]*\.?[0-9]*)M)?(([0-9]*\.?[0-9]*)W)?(([0-9]*\.?[0-9]*)D)?)?(T(([0-9]*\.?[0-9]*)H)?(([0-9]*\.?[0-9]*)M)?(([0-9]*\.?[0-9]*)S)?)?/
+
+Vue.filter('duration', val => {
+  var matches = val.match(regex)
+  const h = parseFloat(matches[12]) || 0
+  const m = parseFloat(matches[14]) || 0
+  const s = parseFloat(matches[16]) || 0
+  return (h ? h + ':' : '') + m + ':' + s
 })
 
 Vue.filter('fromNow', val => {
-  return moment(val).fromNow()
+  return distanceInWordsToNow(val) + ' ago'
+  // return moment(val).fromNow()
 })

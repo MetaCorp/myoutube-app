@@ -1,5 +1,5 @@
 <template>
-  <mugen-scroll v-if="hasMore" :handler="fetchData2" :should-handle="!loading" class="flex justify-center my-4">
+  <mugen-scroll v-if="hasMore" :handler="fetchData" :should-handle="!loading" class="flex justify-center my-4">
     loading...
   </mugen-scroll>
 </template>

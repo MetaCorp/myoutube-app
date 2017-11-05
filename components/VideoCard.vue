@@ -3,7 +3,7 @@
     <a :href="videoUrl" target="_blank">
       <div class="relative">
         <img class="w-full" :src="video.snippet.thumbnails.medium.url">
-        <span class="absolute pin-b pin-r inline-block bg-grey-lighter px-2 py-1 m-2 text-sm font-semibold text-grey-darker">{{ video.contentDetails.duration | moment('HH:mm', 'H:mm') }}</span>
+        <span class="absolute pin-b pin-r inline-block bg-grey-lighter px-2 py-1 m-2 text-sm font-semibold text-grey-darker">{{ video.contentDetails.duration | duration }}</span>
       </div>
     </a>
     <div class="px-6 py-4">

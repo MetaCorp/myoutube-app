@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto my-4">
+  <div>
     <nuxt-link to="/test">To Test</nuxt-link>
     <video-filter :filters="filters" v-model="currentFilter"></video-filter>
     <video-list :videos="videos"></video-list>
