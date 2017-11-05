@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^1.0.2",
+    "axios": "^0.17.0",
     "nuxt": "latest"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "jest": "^21.2.1",
     "jest-serializer-vue": "^0.2.0",
     "tailwindcss": "^0.1.3",
-    "vue-jest": "^1.0.1",
+    "vue-jest": "^1.0.2",
     "vue-test-utils": "^1.0.0-beta.4"
   },
   "jest": {

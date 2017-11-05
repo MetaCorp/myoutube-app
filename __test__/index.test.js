@@ -9,7 +9,7 @@ describe('Index page', () => {
   
   it('equals videos to [{ id: 0, title: "Test" }]', () => {
     const wrapper = shallow(Index, {
-      data: {
+      computedData: {
         videos
       }
     })
@@ -36,8 +36,10 @@ describe('Index page', () => {
   
   it('has the expected html structure', () => {
     const wrapper = shallow(Index, {
+      computedData: {
+        videos
+      },
       data: {
-        videos,
         filters,
         currentFilter
       }
