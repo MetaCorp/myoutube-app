@@ -31,11 +31,15 @@ Vue.filter('vues', val => {
 
 var regex = /P((([0-9]*\.?[0-9]*)Y)?(([0-9]*\.?[0-9]*)M)?(([0-9]*\.?[0-9]*)W)?(([0-9]*\.?[0-9]*)D)?)?(T(([0-9]*\.?[0-9]*)H)?(([0-9]*\.?[0-9]*)M)?(([0-9]*\.?[0-9]*)S)?)?/
 
+const get2Digits = val => val.length === 1 ? '0' + val : val
+
 Vue.filter('duration', val => {
-  var matches = val.match(regex)
-  const h = parseFloat(matches[12]) || 0
-  const m = parseFloat(matches[14]) || 0
-  const s = parseFloat(matches[16]) || 0
+  const matches = val.match(regex)
+  let h = matches[12] || 0
+  let m = matches[14] || 0
+  let s = matches[16] || 0
+  m = h ? get2Digits(m) : m
+  s = get2Digits(s)
   return (h ? h + ':' : '') + m + ':' + s
 })
 
