@@ -31,7 +31,9 @@ module.exports = {
     lang: 'en',
     theme_color: '#3B8070'
   },
-
+  plugins: [
+    '~plugins/filters.js'
+  ],
   /*
   ** Build configuration
   */
