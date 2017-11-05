@@ -6722,6 +6722,10 @@ throat@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
+throttleit@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
+
 through2@^0.6.1, through2@^0.6.3, through2@~0.6.1:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
@@ -7072,6 +7076,12 @@ vue-meta@^1.1.0:
     deepmerge "^1.5.0"
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
+
+vue-mugen-scroll@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/vue-mugen-scroll/-/vue-mugen-scroll-0.2.5.tgz#a69c2e2e26bbd8444da88bc457f8b9d543364924"
+  dependencies:
+    throttleit "^1.0.0"
 
 vue-router@^2.7.0:
   version "2.8.1"

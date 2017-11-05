@@ -18,7 +18,8 @@
     "@nuxtjs/pwa": "^1.0.2",
     "axios": "^0.17.0",
     "moment": "^2.19.1",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vue-mugen-scroll": "^0.2.5"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
