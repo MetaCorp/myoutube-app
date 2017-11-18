@@ -2,12 +2,13 @@
   <div>
     <nuxt-link to="/test">To Test</nuxt-link>
     <video-filter :filters="filters" v-model="currentFilter"></video-filter>
-    <video-list :videos="videos"></video-list>
+    <video-list :videos="videos.items"></video-list>
     <video-load-more :fetchData="loadMore"></video-load-more>
   </div>
 </template>
 
 <script>
+import allVideos from '@/apollo/queries/videos'
 import VideoList from '@/components/VideoList'
 import VideoFilter from '@/components/VideoFilter'
 import VideoLoadMore from '@/components/VideoLoadMore'
@@ -19,17 +20,15 @@ export default {
       filters: ['Music', 'Physic', 'Development']
     }
   },
-  async fetch ({ store }) {
-    await store.dispatch('loadVideos')
-  },
-  computed: {
-    videos () {
-      return this.$store.state.videos
+  apollo: {
+    videos: {
+      prefetch: true,
+      query: allVideos
     }
   },
   methods: {
     loadMore () {
-      this.$store.dispatch('loadMoreVideos')
+
     }
   },
   components: {

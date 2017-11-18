@@ -31,6 +31,12 @@ module.exports = {
     lang: 'en',
     theme_color: '#3B8070'
   },
+  modules: ['@nuxtjs/apollo'],
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/client-configs/default.js'
+    }
+  },
   plugins: [
     '~plugins/filters.js'
   ],
