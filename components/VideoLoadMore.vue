@@ -9,15 +9,9 @@ import MugenScroll from 'vue-mugen-scroll'
 
 export default {
   props: {
-    fetchData: Function
-  },
-  computed: {
-    loading () {
-      return this.$store.state.loading
-    },
-    hasMore () {
-      return this.$store.state.nextPageToken
-    }
+    fetchData: Function,
+    hasMore: Boolean,
+    loading: Boolean
   },
   components: { MugenScroll }
 }
